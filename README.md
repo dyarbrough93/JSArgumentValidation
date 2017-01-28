@@ -37,7 +37,8 @@ function Tuple(a, b) {
       isValidTuple: function() {
           return typeof this.a === 'number' &&
                  typeof this.b === 'number';
-      }
+      },
+      isTuple: true
   };
 }
 ```
@@ -49,5 +50,17 @@ function validateTuple(tuple /*{Tuple}*/) {
 }
 ```
 This will call the ```isValidTuple``` method on ```tuple``` for validation.
+We can also do this (equivalent, though exception message may be less descriptive):
+```javascript
+function validateTuple(tuple /*{Tuple}*/) {
+  Validation.validateArguments(arguments, [tuple.isValidTuple()], foo);
+}
+```
+The boolean can be used similarly:
+```javascript
+function validateTuple(tuple /*{Tuple}*/) {
+  Validation.validateArguments(arguments, [tuple.isTuple], foo);
+}
+```
 
 
