@@ -26,7 +26,8 @@ function foo(bar /*{number}*/, baz /*{boolean}*/) {
 }
 ```
 This validates that ```bar ``` is a number and ```baz ```
-is a boolean.
+is a boolean. Supports ```strings```, ```booleans```,
+```objects```, and ```number```s.
 ### Instance validation functions and booleans
 Suppose you have an object defined as such:
 ```javascript
