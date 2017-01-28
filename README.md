@@ -6,6 +6,7 @@ types, that all arguments are defined, and that all arguments
 match their respective type in the "types" array. If an instance
 validation function is passed, it will be used for type validation.
 If something is invalid, an appropriate error is thrown.
+Dependent on ```getFuncParamNames.js```, credit http://stackoverflow.com/users/3404223/snailcrusher
 
 ## Usage
 ```javascript
