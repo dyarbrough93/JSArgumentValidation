@@ -61,7 +61,7 @@ var Validation = (function(window, undefined) {
 
             if (typeof types[i] === 'function') {
                 if (!(types[i].call(args[i]))) {
-                    console.warn('args[' + i + '] is not valid according to ' + types[i].name);
+                    console.warn('args[' + i + '] is not valid according to ' + (types[i].name ? types[i].name : 'an instance function'));
                     ret = i;
                     done = true;
                 }
@@ -130,7 +130,6 @@ var Validation = (function(window, undefined) {
     }
     
     return {
-        validateArguments: validateArguments,
-        IllegalArgumentException: IllegalArgumentException
+        validateArguments: validateArguments
     }
 })(window, undefined);
